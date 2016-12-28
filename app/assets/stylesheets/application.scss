@@ -1,0 +1,64 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond');
+ 
+$greenery : rgba(134,175,73,0.2); 
+$purplehaze : rgba(129,115,151,0.2); 
+$smokygrape :rgba(184,139,172,0.2); 
+$tawnyorange :rgba(213,127,112,0.2); 
+$twistedyellow :rgba(220,185,103,0.2); 
+$sphinx : rgba(172,152,151,0.2); 
+$woodrose :rgba(175,140,144,0.2); 
+$buttercream : rgba(240,225,206,0.2); 
+
+
+*{
+	font-family: 'EB Garamond', serif;
+}
+
+.header{
+	height:10vh;
+}
+
+.body{
+	min-height: 80vh;
+}
+
+.footer{
+	height: 10vh;
+}
+.pillbox{
+	margin:10%;
+
+}
+.pill{
+	border: 10px solid #a7ffeb;
+	background-color: teal;
+	height: 140px;
+}
+.pill > *{
+	color: #a7ffeb;
+	text-align: center;
+	line-height: 100px; 
+}
+
+.row1{
+
+}
+
+.topLeft{
+	border-radius: 50px 0 0 0;
+}
+.topRight{
+	border-radius: 0 50px 0 0;
+}
+.bottomLeft{
+	border-radius: 0 0 0 50px;
+
+}
+.bottomRight{
+	border-radius: 0 0 50px 0;
+}
+.row2{
+	margin-top: -25px;
+}

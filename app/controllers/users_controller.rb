@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       # Sends email to user when user is created.
-      WelcomeMailer.welcome_email(@user).deliver_later
+      HelloMailer.hello_email(@user).deliver_later
 
       format.html { redirect_to root_path, notice: 'Welcome! Your account has been created.' }
       format.json { render :show, status: :created, location: @user }

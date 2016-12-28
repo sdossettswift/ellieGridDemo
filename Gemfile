@@ -37,9 +37,9 @@ gem 'bcrypt', '~> 3.1.7'
 #for database modeling; run rake erd
 gem 'rails-erd'
 #for bootstrap bliss
-#gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 3.3.5'
 #for materialize
-gem 'materialize-sass'
+#gem 'materialize-sass'
 #icons are easy now
 gem 'font-awesome-rails'
 #because forms should be simple
@@ -47,8 +47,6 @@ gem 'simple_form'
 #figaro to handle environmental variables
 gem 'figaro'
 
-#sendgrid
-# gem 'sendgrid-ruby'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
