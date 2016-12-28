@@ -1,0 +1,16 @@
+<div class="container">
+	<h1>Sign In</h1>
+	  <%= form_tag do %>
+		  <div class="form-group">
+		      <%= label_tag :email %>
+		      <%= text_field_tag :email, params[:email], class: "form-control" %>
+		  </div>
+		  <div class="form-group">
+		      <%= label_tag :password %>
+		      <%= password_field_tag :password, "", class: "form-control" %>
+		  </div>
+		  <div class="form-group">
+		      <%= submit_tag "Sign In", class: "btn btn-raised btn-default"%>
+		  </div>
+	<% end %>
+</div>

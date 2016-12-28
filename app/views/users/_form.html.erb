@@ -1,0 +1,25 @@
+<% if @user.errors.any? %>
+	<% @user.errors.full_messages.each do |error| %>
+	<p class="alert alert-danger">
+	    <strong><%= error %></strong>
+	</p>
+	<% end %>
+<% end %>
+
+<%=simple_form_for @user do |f|%>
+	<%= f.input :name%>
+	<%= f.input :email%>
+
+	<div class="form-group">
+	    <%= f.label :password %>
+	    <%= f.password_field :password, size: "60x12", class: "form-control" %>
+	</div>
+	<div class="form-group">
+	    <%= f.label :password_confirmation %>
+	    <%= f.password_field :password_confirmation, size: "60x12", class: "form-control" %>
+	</div>
+
+	<div class="form-group">
+	    <%= f.submit class: "btn btn-primary" %>
+	</div>
+<% end %>

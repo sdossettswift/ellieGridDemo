@@ -1,0 +1,22 @@
+<h1>Users</h1>
+
+<table>
+	<thead>
+		<tr>
+			<th>User Id</th>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Link</th>
+		</tr>
+	</thead>
+	<tbody>
+		<%@users.each do |user|%>
+		<tr>
+			<td><%= user.id%></td>
+			<td><%= user.name%></td>
+			<td><%= user.email%></td>
+			<td><%= link_to 'More Info', user_path(id: user.id)%></td>
+		</tr>
+		<% end%>
+	</tbody>
+</table>

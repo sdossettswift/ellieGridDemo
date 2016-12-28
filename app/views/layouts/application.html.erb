@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>EllieGridDemo</title>
+    <title>EllieGrid Demo</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,13 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'layouts/header' %>
+    <div class="container">
+    <%= render 'layouts/notices' %>
+      <div class ="body">
+          <%= yield %>
+        </div>
+    </div>
+    <%= render 'layouts/footer' %>
   </body>
 </html>

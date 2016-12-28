@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 	delete 'sign_in' => 'sessions#delete', as: :end_session
 	get 'sign_out' => 'sessions#delete', as: :sign_out
 
-	root 'home#hello'
+	root 'welcome#hello'
 
 
 end
