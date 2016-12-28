@@ -1,0 +1,15 @@
+language: ruby
+rvm:
+- 2.3.1
+addons:
+  postgresql: '9.4'
+before_script:
+- psql -c 'create database travis_ci_test;' -U postgres
+- cp config/database.yml.travis config/database.yml
+deploy:
+  provider: heroku
+  api_key:
+    secure: CPcYX+xh0lrddT0fo+sp5XwAYikgRky3bH3D2J8/SwrVD6ygSHNGN/JkK5ac6aXk1/movaslV3b0kQO0vdf5kr13/bnE7WDaTrThHx3D5/VRK6YjbIp0LivQynlOV9u6Vp9z/dDIP2w8WQI9UkIPkzJk0CGDE61jiCIqRWuwD6rD6I8KtBmfaeV881nUeGJ71aJR5Co4LRCyGvmWrlzw9SdMVtJU1soTY5k8EdDrkXl1I+zazhJA3xkwHHXbW8Hpv1kDqGkaRDwkqYw5wWa9cZQb+btJBiKjNA0sUAqx49qqQdc5PZ9/olCbMlGPr2SAeg9vdld+F9npmiz91yWqvzlnDMLbU71mZCM8VDhMoY94YERERZQFNvpKXTfIdTsKZhwZGg8sBUrU2NWCHbZJvSpsy9e8aOxS0tp0QTuTpimElD87VLh4R+nR5jQlZ51PmcQehGGZJEOgaAGof6KDXeCuTqk5Pb4lNTICE84lJG4SC71wzqWGCrB50xmubgWzkESRMRGEXeIFtGQFfaelh0i7TDDrsp6EPBeSdXJtZyZ8MszLFzBSOa2zBBdaCwNcE6sX3Dm/DrsW4B4ez1C6O14KNIxRbrAI6WwMqEVw95cykLo5x1KPljAi/BysOWz50nxDDxGQel04n6VD6AXslhThc/91YcqzyLF3uvfWLo8=
+  app: ellie-grid-demo
+  on:
+    repo: sdossettswift/ellieGridDemo
