@@ -13,3 +13,5 @@ deploy:
   app: ellie-grid-demo
   on:
     repo: sdossettswift/ellieGridDemo
+run:
+ - "rake db:migrate"
