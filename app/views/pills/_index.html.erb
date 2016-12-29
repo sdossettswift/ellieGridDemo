@@ -1,0 +1,8 @@
+<% @pills.each do |pill| %>
+  <tr>
+    <td><%= pill.drug %></td>
+    <td><%= pill.dose %></td>
+    <td><%= link_to "Edit", edit_pill_path(pill), remote: true, class: "btn btn-default" %></td>
+    <td><%= link_to "Delete", pill_delete_path(pill), remote: true, class: "btn btn-danger" %></td>
+  </tr>
+<% end %>

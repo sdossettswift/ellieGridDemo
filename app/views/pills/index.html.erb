@@ -1,0 +1,32 @@
+
+<div id="pill-modal" class="modal fade"></div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-3 pill topLeft">
+      <%= render 'pill_slot_info', pill:  @first %>
+    </div>
+    <div class="col-xs-3 pill">
+      <%= render 'pill_slot_info', pill:  @second%>
+    </div>
+    <div class="col-xs-3 pill">
+      <%= render 'pill_slot_info', pill:  @third%>
+    </div>
+    <div class="col-xs-3 pill topRight">
+      <%= render 'pill_slot_info', pill:  @fourth%>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4 pill bottomLeft">
+      <%= render 'pill_slot_info', pill:  @fifth %>
+    </div>
+    <div class="col-xs-4 pill">
+      <%= render 'pill_slot_info', pill:  @sixth%>
+    </div>
+    <div class="col-xs-4 pill bottomRight">
+      <%= render 'pill_slot_info', pill:  @seventh%>
+    </div>
+
+  </div>
+
+</div>

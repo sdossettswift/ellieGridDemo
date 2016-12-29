@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  drug: MyString
+  dosage: MyString
+  time: 2016-12-28 15:42:02
+  slot: 1
+
+two:
+  drug: MyString
+  dosage: MyString
+  time: 2016-12-28 15:42:02
+  slot: 1

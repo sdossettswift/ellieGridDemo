@@ -1,0 +1,13 @@
+$("ul.errors").html("")
+<% if @pill.errors.any? %>
+  <% @pill.errors.full_messages.each do |message| %>
+    $("ul.errors").append($("<li />").html("<%= message.html_safe %>"))
+  <% end %>
+<% else %>
+  $(".pill-index").html("<%= escape_javascript(render 'index') %>")
+  $("#pill-modal").modal("hide")
+  $('#pill-modal').on('hidden', function () {
+    document.location.reload();
+  })
+
+<% end %>

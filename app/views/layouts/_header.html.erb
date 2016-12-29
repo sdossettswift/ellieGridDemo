@@ -1,13 +1,14 @@
-<nav>
-	<div class="nav-wrapper ">
-		<a href="#" class="brand-logo">Ellie Grid</a>
-		<ul id="nav-mobile" class="right hide-on-med-and-down">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    <h1>Ellie Grid</h1>
 			<%if @current_user%>
 			<li><%= link_to "Sign Out", sign_out_path %></li>
 			<%else%>
 				<li><%= link_to "Sign In", sign_in_path %></li>
 				<li><%= link_to "Sign Up", new_user_path %></li>
 			<%end%>
-		</ul>
-	</div>
+
+    </div>
+  </div>
 </nav>

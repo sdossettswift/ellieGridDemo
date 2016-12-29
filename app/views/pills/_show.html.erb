@@ -1,0 +1,4 @@
+<%= @pill.drug %>
+<%= @pill.dose %>
+<%= link_to "Edit", edit_pill_path(@pill), remote: true, class: "btn btn-default" %>
+<%= link_to "Delete", pill_delete_path(@pill), remote: true, class: "btn btn-danger" %>

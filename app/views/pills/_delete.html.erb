@@ -1,0 +1,14 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+  <div class="modal-header">
+    <h3>Delete Pill</h3>
+  </div>
+  <div class="modal-body">
+  <ul class="errors"></ul>
+  <%= @pill.drug%> </div>
+  <div class="modal-footer">
+    <%= link_to "Yes, Delete This Pill", remove_pill_path(@pill), method: :patch, remote: true, class: "btn btn-danger" %>
+    <%= link_to "No, Please Don't", "#", class: "btn btn-default", data: { dismiss: "modal" } %>
+  </div>
+  </div>
+</div>

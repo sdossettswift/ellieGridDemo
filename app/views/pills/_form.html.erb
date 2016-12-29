@@ -1,0 +1,22 @@
+<div class="modal-dialog" id="myModal">
+  <div class="modal-content">
+    <%= form_for @pill, remote: true, html: { style: "display:inline;" } do |f| %>
+      <div class="modal-body">
+        <ul class="errors"></ul>
+
+        <div class="form-group">
+          <%= f.label :drug, class:"control-label" %>
+          <%= f.text_field :drug, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :dose, class: "control-label" %>
+          <%= f.text_field :dose, class: "form-control" %>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <%= f.submit class: "btn btn-primary" %>
+        <%= link_to "Cancel", "#", class: "btn", data: {dismiss: "modal"} %>
+      </div>
+    <% end %>
+  </div>
+</div>
