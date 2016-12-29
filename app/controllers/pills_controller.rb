@@ -10,6 +10,7 @@ class PillsController < ApplicationController
    @fifth =  Pill.by_slot("Fifth").first
    @sixth = Pill.by_slot("Sixth").first
    @seventh = Pill.by_slot("Seventh").first
+
   end
 
 
@@ -67,6 +68,6 @@ class PillsController < ApplicationController
 
 
   def pill_params
-   params.require(:pill).permit(:drug, :dose, :date, :slot, :boxes_id, :box_id)
+   params.require(:pill).permit(:drug, :dose, :time, :slot, :box_id)
   end
 end

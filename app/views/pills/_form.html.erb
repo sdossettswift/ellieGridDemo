@@ -5,12 +5,16 @@
         <ul class="errors"></ul>
 
         <div class="form-group">
-          <%= f.label :drug, class:"control-label" %>
-          <%= f.text_field :drug, class: "form-control" %>
+          <%= f.label :drug %>
+          <%= f.text_field :drug %>
         </div>
         <div class="form-group">
           <%= f.label :dose, class: "control-label" %>
-          <%= f.text_field :dose, class: "form-control" %>
+          <%= f.text_field :dose %>
+        </div>
+        <div class="form-group">
+          <%= f.label :time %>
+          <%= f.time_select :time, {minute_step: 15, ampm: true}%>
         </div>
       </div>
       <div class="modal-footer">
