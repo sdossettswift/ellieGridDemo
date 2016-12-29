@@ -6,7 +6,7 @@
   <body>
     <h1>Hi <%= @user.name %></h1>
     <h2> Your pill box is updated with <%= @pill.drug%>.</h2>
-    <p> Treat yourself right and take <%= @pill.dose%> of   <%= @pill.drug%> at  <%= @pill.time%>.
+    <p> Treat yourself right and take <%= @pill.dose%> of   <%= @pill.drug%> at  <%= @pill.time.strftime("%I:%M %p")%>.
     </p>
   </body>
 </html>
