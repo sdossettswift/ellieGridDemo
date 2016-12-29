@@ -38,11 +38,8 @@ class PillsController < ApplicationController
   def update
    @pills = Pill.all.order(id: :asc)
    @pill = Pill.find(params[:id])
-   # Sends email to user when user is created.
-   MedsScheduledMailer.scheduled_email(@current_user, @pill).deliver_later
-
-
    @pill.update_attributes(pill_params)
+   MedsScheduledMailer.scheduled_email(@current_user, @pill).deliver_later
   end
 
   def delete
