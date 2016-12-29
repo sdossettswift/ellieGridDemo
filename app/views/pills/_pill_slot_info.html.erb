@@ -2,10 +2,12 @@
   <%= link_to "Add", new_pill_path, remote: true %>
 <% else %>
 
+  <%=  link_to '<i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>'.html_safe, edit_pill_path(pill), remote: true%>
+  <span>  </span>
+  <%= link_to '<i class="fa fa-minus-circle fa-3x" aria-hidden="true"></i>'.html_safe, remove_pill_path(pill),remote: true %>
+
   <h4><%=pill.drug %></h4>
   <h5><%=pill.dose %></h5>
   <h5><%=pill.formatted_time if pill.time.present? %></h5>
-  <%=  link_to " Edit ", edit_pill_path(pill), remote: true%>
-<span>  |  </span>
-  <%= link_to "  Delete ", remove_pill_path(pill),remote: true %>
+
 <% end %>

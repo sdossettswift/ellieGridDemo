@@ -1,6 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+@import "font-awesome";
 
 $greenery : rgba(134,175,73,1);
 $purplehaze : rgba(129,115,151,0.2);
@@ -12,6 +12,7 @@ $woodrose :rgba(175,140,144,0.2);
 $buttercream : rgba(240,225,206,0.2);
 
 
+
 *{
 	font-family: 'Avenir', sans-serif;
 }
@@ -20,12 +21,15 @@ img {
     height: 70px;
 }
 nav{
-	height: 100px; 
+	height: 100px;
 }
 .header{
 	height:140px;
 }
-
+.fa{
+	padding: 5px;
+	margin: 10px;
+}
 .body{
 	min-height: 80vh;
 }

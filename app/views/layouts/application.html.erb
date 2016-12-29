@@ -6,15 +6,33 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <style type="text/css">
+        #warning-message { display: none; }
+        @media only screen and (orientation:portrait){
+            #wrapper { display:none; }
+            #warning-message { display:block; }
+        }
+        @media only screen and (orientation:landscape){
+            #warning-message { display:none; }
+        }
+    </style>
+
   </head>
 
   <body>
     <%= render 'layouts/header' %>
     <div class="container">
     <%= render 'layouts/notices' %>
+    <div id="warning-message">
+        this website is only viewable in landscape mode
+    </div>
+    <div id="wrapper">
       <div class ="body">
           <%= yield %>
         </div>
+    </div>
+
+  
     </div>
     <%= render 'layouts/footer' %>
   </body>
