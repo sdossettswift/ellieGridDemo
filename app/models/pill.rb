@@ -1,5 +1,6 @@
 class Pill < ApplicationRecord
   belongs_to :box
+  has_many :notifications
   scope :by_slot, -> (slot_number) {where(slot: slot_number)}
   SLOT = ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh']
 

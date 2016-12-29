@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2016-12-29 02:06:00
+  pill_id: 
+  time: 2016-12-29 02:06:00
+  status: MyString
+
+two:
+  date: 2016-12-29 02:06:00
+  pill_id: 
+  time: 2016-12-29 02:06:00
+  status: MyString
