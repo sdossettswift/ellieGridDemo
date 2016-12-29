@@ -7,9 +7,11 @@ Rails.application.routes.draw do
 	  resources :pills
 	end
 
-	get 'pills/:id/remove' =>  'pills#remove', as: :remove_pill
-	patch  '/pills/:id'    =>  'pills#remove'
-	put    '/pills/:id'    =>  'pills#remove'
+
+	get 'pills/:id/remove' => 'pills#edit', as: :remove_pill
+
+	patch  '/pills/:id'    =>  'pills#update'
+	put    '/pills/:id'    =>  'pills#update'
 
 	resources :pills do
 		get "delete"

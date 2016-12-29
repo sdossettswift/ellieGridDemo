@@ -55,13 +55,12 @@ class PillsController < ApplicationController
 
 
   def remove
-
+    @pill = Pill.find(params[:id])
     @pill.drug = ""
     @pill.dose = ""
     @pill.update_attributes(pill_params)
-
-
   end
+
   private
   def sign_in
    if @current_user.nil?
