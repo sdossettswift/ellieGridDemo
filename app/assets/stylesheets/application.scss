@@ -1,19 +1,19 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import url('https://fonts.googleapis.com/css?family=EB+Garamond');
- 
-$greenery : rgba(134,175,73,0.2); 
-$purplehaze : rgba(129,115,151,0.2); 
-$smokygrape :rgba(184,139,172,0.2); 
-$tawnyorange :rgba(213,127,112,0.2); 
-$twistedyellow :rgba(220,185,103,0.2); 
-$sphinx : rgba(172,152,151,0.2); 
-$woodrose :rgba(175,140,144,0.2); 
-$buttercream : rgba(240,225,206,0.2); 
+
+
+$greenery : rgba(134,175,73,1);
+$purplehaze : rgba(129,115,151,0.2);
+$smokygrape :rgba(184,139,172,0.2);
+$tawnyorange :rgba(213,127,112,0.2);
+$twistedyellow :rgba(220,185,103,0.2);
+$sphinx : rgba(172,152,151,0.2);
+$woodrose :rgba(175,140,144,0.2);
+$buttercream : rgba(240,225,206,0.2);
 
 
 *{
-	font-family: 'EB Garamond', serif;
+	font-family: 'Avenir', sans-serif;
 }
 
 .header{
@@ -32,14 +32,14 @@ $buttercream : rgba(240,225,206,0.2);
 
 }
 .pill{
-	border: 10px solid #a7ffeb;
+	border: 10px solid $greenery;
 	background-color: teal;
 	height: 140px;
+  text-align: center;
 }
 .pill > *{
-	color: #a7ffeb;
+	color: white;
 	text-align: center;
-	line-height: 100px; 
 }
 
 .row1{
