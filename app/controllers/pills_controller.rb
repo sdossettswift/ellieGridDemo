@@ -1,15 +1,18 @@
 class PillsController < ApplicationController
   before_action :sign_in
+  before_action do
+     @current_user = User.find_by id: session[:user_id]
+ end
 
   def index
-   @pills = Pill.all.order(id: :asc)
-   @first = Pill.by_slot("First").first
-   @second = Pill.by_slot("Second").first
-   @third = Pill.by_slot("Third").first
-   @fourth = Pill.by_slot("Fourth").first
-   @fifth =  Pill.by_slot("Fifth").first
-   @sixth = Pill.by_slot("Sixth").first
-   @seventh = Pill.by_slot("Seventh").first
+   @pills = @current_user.pills.all.order(id: :asc)
+   @first = @current_user.pills.by_slot("First").first
+   @second = @current_user.pills.by_slot("Second").first
+   @third = @current_user.pills.by_slot("Third").first
+   @fourth = @current_user.pills.by_slot("Fourth").first
+   @fifth =  @current_user.pills.by_slot("Fifth").first
+   @sixth = @current_user.pills.by_slot("Sixth").first
+   @seventh = @current_user.pills.by_slot("Seventh").first
 
   end
 

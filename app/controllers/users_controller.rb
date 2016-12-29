@@ -15,6 +15,38 @@ class UsersController < ApplicationController
       # Sends email to user when user is created.
       HelloMailer.hello_email(@user).deliver_later
 
+      @box = @user.boxes.build
+      @box.save
+
+      @first = @box.pills.build(slot: "First")
+      @first.save
+      puts @first.slot
+
+      @second = @box.pills.build(slot: "Second")
+      @second.save
+      puts @second.slot
+
+      @third = @box.pills.build(slot: "Third")
+      @third.save
+      puts @third.slot
+
+      @fourth = @box.pills.build(slot: "Fourth")
+      @fourth.save
+      puts @fourth.slot
+
+      @fifth = @box.pills.build(slot: "Fifth")
+      @fifth.save
+      puts @fifth.slot
+
+      @sixth = @box.pills.build(slot: "Sixth")
+      @sixth.save
+      puts @sixth.slot
+
+      @seventh = @box.pills.build(slot: "Seventh")
+      @seventh.save
+      puts @seventh.slot
+
+
       format.html { redirect_to root_path, notice: 'Welcome! Your account has been created.' }
       format.json { render :show, status: :created, location: @user }
     else

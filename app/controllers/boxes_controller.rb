@@ -11,6 +11,7 @@ class BoxesController < ApplicationController
   def create
    @boxes = Box.all
    @box = Box.create(box_params)
+   
   end
 
   def edit
@@ -38,6 +39,6 @@ class BoxesController < ApplicationController
   private
 
   def box_params
-   params.require(:box).permit()
+   params.require(:box).permit(:user_id)
   end
 end
