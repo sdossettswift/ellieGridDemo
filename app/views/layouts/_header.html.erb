@@ -1,12 +1,16 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-    <h1>Ellie Grid</h1>
-			<%if @current_user%>
-			<li><%= link_to "Sign Out", sign_out_path %></li>
-			<%else%>
-			<%end%>
-
+      <a class="navbar-brand" href="#">
+        <img alt="Brand" src="mark.png">
+      </a>
     </div>
+    
   </div>
+  <ul class="nav navbar-nav navbar-right">
+     <%if @current_user%>
+     <li><%= link_to "Sign Out", sign_out_path %></li>
+     <%else%>
+     <%end%>
+ </ul>
 </nav>
