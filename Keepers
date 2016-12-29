@@ -1,0 +1,9 @@
+Things to keep:
+
+
+pills_due = Pill.where(time: Time.now..Time.now+2.minutes)
+
+for pills_due.each do |pill|
+
+  TakeYourMedsMailer.meds_email(@user, @pill).deliver_later
+end

@@ -1,8 +1,8 @@
 class TakeYourMedsMailer < ApplicationMailer
   default from:  ENV['gmail_username']
 
-  def meds_email(current_user, pill)
-    @user = current_user
+  def meds_email(user, pill)
+    @user = user
     @pill = pill
     mail(to: @user.email, subject: 'Time for Your Meds!')
   end
